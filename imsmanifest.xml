@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<manifest xmlns="http://www.imsglobal.org/xsd/imscp_v1p1" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3" xmlns:lom="http://ltsc.ieee.org/xsd/LOM" xmlns:imsss="http://www.imsglobal.org/xsd/imsss" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="5f8539133fd845668c779c33205ad4a0" xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 imscp_v1p1.xsd http://www.adlnet.org/xsd/adlcp_v1p3 adlcp_v1p3.xsd http://ltsc.ieee.org/xsd/LOM lomCustom.xsd http://www.imsglobal.org/xsd/imsss imsss_v1p0.xsd">
+	<metadata>
+		<schema>ADL SCORM</schema>
+		<schemaversion>CAM 1.3</schemaversion>
+	</metadata>
+	<organizations default="videoManifest">
+		<organization identifier="videoManifest">
+			<title>
+				<string language="en">Assessment</string>
+				<string language="fr"/>
+			</title>
+			<imsss:sequencing IDRef="IMS_videoManifest" />
+			<item identifier="courseItem" identifierref="videoSco" isvisible="true" parameters="">
+				<description></description><title><string language="en"></string><string language="fr"/></title>
+        <imsss:sequencing IDRef="IMS_courseItem" />
+			</item>
+		</organization>
+	</organizations>
+	<resources>
+		<resource identifier="videoSco" type="webcontent" adlcp:scormType="sco" href="index.htm">
+			<file href="index.htm"/>
+		</resource>		
+	</resources>
+	<imsss:sequencingCollection>
+		<imsss:sequencing ID="IMS_videoManifest">
+			<imsss:controlMode flow="true" />
+			<imsss:objectives>
+				<imsss:primaryObjective objectiveID="item_videoManifest" satisfiedByMeasure="false" />
+			</imsss:objectives>
+			<imsss:rollupRules rollupProgressCompletion="true">
+				<imsss:rollupRule childActivitySet="all">
+					<imsss:rollupConditions>
+						<imsss:rollupCondition condition="completed" />
+					</imsss:rollupConditions>
+					<imsss:rollupAction action="completed" />
+				</imsss:rollupRule>
+			</imsss:rollupRules>
+		</imsss:sequencing>
+		<imsss:sequencing ID="IMS_courseItem">
+			<imsss:controlMode flow="true" />
+			<imsss:objectives>
+				<imsss:primaryObjective objectiveID="item_courseItem" satisfiedByMeasure="false" />
+			</imsss:objectives>
+			<imsss:rollupRules rollupProgressCompletion="true" />
+			<adlseq:rollupConsiderations xmlns:adlseq="http://www.adlnet.org/xsd/adlseq_v1p3" requiredForSatisfied="always" requiredForCompleted="always" />
+		</imsss:sequencing>
+	</imsss:sequencingCollection>
+</manifest>

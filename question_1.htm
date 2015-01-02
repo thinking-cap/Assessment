@@ -1,0 +1,45 @@
+<html>
+<head>
+    <!-- Question 1,2,3-->
+    <title>Question 1</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="main.js"></script> <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css"/>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>    
+    <link type="text/css" media="screen" href="style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="question">
+            <!-- Question Text -->
+            <p class="qtext">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo nunc nec diam fringilla semper..
+            </p>
+            <ol class="choices">
+                <!-- correct class indicates correct choices-->
+                <li class="correct">option one correct</li>
+                <li>option two</li>
+                <li>option three</li>
+                <li>option four</li>
+            </ol>
+            <button class="submit">Submit</button>
+            <!--ONLY ADD FEEDBACK if it exists.-->
+            <div class="feedback hidden">
+                <div class="correct hidden">
+                    <!-- Correct Feedback Text-->
+                    <p>CORRECT! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo nunc nec diam fringilla semper.</p>
+                    <div class="close_txt">Click anywhere to close.</div>
+                </div>
+                <div class="incorrect hidden">
+                    <!-- Incorrect Feedback Text-->
+                    <p>INCORRECT! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo nunc nec diam fringilla semper.</p>
+                    <div class="close_txt">Click anywhere to close.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

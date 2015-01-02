@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Question 8</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript">
+        var feedback = false;
+        $(document).ready(function () {  parent.Assessment.summarize($('.summary')); });
+    </script>
+    <link type="text/css" media="screen" href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css" />
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <link type="text/css" media="screen" href="style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="question">
+           <h3>Congratulations you've made it!</h3>
+            <div class="summary"></div>
+           <button onclick=" parent.Assessment.review();">Review</button>
+        </div>
+    </div>
+</body>
+</html>
